@@ -1,0 +1,1145 @@
+@charset "utf8";
+/*
+
+This is the main marina website css 
+
+Feel free to add other bright colors to help you to distinguish parts of the divs in a certain part of the page, I find it easier to
+arrange the content.
+
+I will use this comment to keep the hexadecimal color codes for the colors to be used on the site
+
+-Color Theme Swatches in Hex-
+.Kehitta-panel-A-1-hex { color: #040B17; } Dark blue
+.Kehitta-panel-A-2-hex { color: #2F5EEB; } Blue
+.Kehitta-panel-A-3-hex { color: #E8F2FC; } Very light blue = main background color
+.Kehitta-panel-A-4-hex { color: #40A6F7; } Light blue
+.Kehitta-panel-A-5-hex { color: #F5D731; } Yellow
+
+*/
+@import url("../css/font-awesome-4.7.0/css/font-awesome.min.css");/* For the various icons */
+@import url("../css/font-awesome-4.7.0/css/font-awesome.css");
+@import url("../css/fonts.css");
+body{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background-color: #E8F2FC;
+    top: 0px;
+    box-sizing: border-box;
+    font-family: 'abelregular' ;
+    color: #040B17;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    text-align: center;
+    font-family: 'abelregular' ;
+    font-weight: bold;
+}
+
+p{
+    font-size: 20px;
+}
+
+a:hover{
+    color: #2F5EEB;
+}
+
+/* This the Navigation bar css code */
+nav{
+    background-color: #40A6F7;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    position: fixed;
+    padding: 0px;
+    border: 0px;
+    display: block;
+    /*opacity: .2;*/
+    z-index: 10;
+}
+
+.logo{
+    padding: 0;
+    margin: auto auto auto 30px;
+    width: 30%;
+    height: 60px;
+    text-align: center;
+    float: left;
+}
+
+.logo img{
+    padding: auto;
+    margin: auto;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    float: right;
+    width: auto;
+    margin-right: 20px;
+}
+
+nav ul li{
+    margin: 0 20px;
+    display: block;
+    line-height: 30px;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+nav ul li a:hover{
+    background: #E8F2FC;
+    transition: .5s;
+    color: #040B17;
+}
+
+nav ul li .boat-list{
+    display: none;
+}
+nav ul li:hover .boat-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #40A6F7;
+    width: 100px;
+    text-align: left;
+    padding: 0;
+    margin: auto;
+    box-sizing: border-box;
+    transition: .5s;
+}
+/* END of navigation bar css code */
+
+/* Here we make the nav bar 'burger' icon (The three lines) */
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 60px;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* END of nav bar 'burger' icon css code */
+
+/* Here we make the website responsive */
+@media (max-width: 969px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 915px){
+    p{
+        font-size: 15px;
+    }
+    .main-cont{
+        width: 100%;
+        left: 0;
+    }
+    .checkbtn{
+        display: block;
+        float: right;
+    }
+
+    .logo{
+        margin: auto auto auto 50px;
+    }
+
+    nav ul{
+        position: fixed;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background-color: #040B17;
+        top: 45px;
+        left: -100%;
+        text-align: center;
+        margin-left: 0;
+        padding-left: 0;
+        transition: all .5s;
+    }
+    nav ul{
+        display: block;
+    }
+    nav ul li{
+        left: 0;
+        display: block;
+        padding: 20px;
+        width: 100%;
+        margin: 50px 0;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    nav ul li a:hover{
+        background: none;
+        color: #40A6F7;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/* END of making website responsive */
+
+.main-cont{
+    /*background-color: darkgreen;/* This is to be removed immediately we are done */
+    height: fit-content;
+    width: 100%;
+    margin: 0px;
+    border: 0px;
+}
+
+header{
+    background-color: #fff;
+    top: 0;
+    padding-top: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    height: fit-content;
+    text-align: center;
+    color: #040B17;
+}
+
+/* This is the home page header background */
+.index_header{
+    background-image: url("../images/boats/bay-boat-boats-dock-42092.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+/* END of home page header background */
+
+/* This is the gallery header banner css code */
+.gallery_header{
+    background-image: url("../images/banner/banner2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+}
+.gallery_header_cont{
+    margin: auto;
+    width: max-content;
+    line-height: 25vw;
+}
+.gallery_header_cont h1{
+    margin: 0;
+    color: #040B17;
+    text-transform:uppercase;
+    font-size: 30px;
+}
+/* END of gallery header banner css code */
+
+/* This is the about us header banner css code */
+.aboutus_header{
+    background-image: url("../images/banner/banner1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+}
+.aboutus_header_cont{
+    margin: auto;
+    width: max-content;
+    line-height: 25vw;
+}
+.aboutus_header_cont h1{
+    margin: 0;
+    color: #E8F2FC;
+    text-transform: uppercase;
+}
+/* END of gallery header banner css code */
+
+/* This is the shop and rent header banner css code */
+.shop_header{
+    background-image: url("../images/banner/banner2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+}
+.shop_header_cont{
+    margin: auto;
+    width: max-content;
+    line-height: 25vw;
+}
+.shop_header_cont h1{
+    margin: 0;
+    color: #040B17;
+    text-transform: uppercase;
+}
+/* END of gallery header banner css code */
+
+/* This is the contacts header banner css code */
+.contacts_header{
+    background-image: url("../images/banner/banner2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    display: flex;
+}
+.contacts_header_cont{
+    margin: auto;
+    width: max-content;
+    line-height: 25vw;
+}
+.contacts_header_cont h1{
+    margin: 0;
+    color: #040B17;
+    text-transform: uppercase;
+}
+/* END of contacts header banner css code */
+
+/*#slider{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slider figure{
+    width: 200%;
+    height: 100%;
+    margin: 0;
+    left: 0;
+    animation: 5s slider infinite;
+}
+
+#slider figure img{
+    width: 50%;
+    float: left;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 0;
+    }
+    100%{
+        left: -200%;
+    }
+}
+  
+.content{
+    margin: auto;
+}*/
+
+/* Begining of the content code */
+.cont1, .cont2, .cont3, .cont4, .cont5, .cont6, .cont7{
+    /*background-color: hotpink;/* This is to be removed immediately we are done */
+    background-color: #fff;
+    border: 0px;
+    margin: 50px 0px;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    height: fit-content;
+    display: block;
+}
+
+.cont1a, .cont2a, .cont3a, .cont4a, .cont5a, .cont6a, .cont7a{
+    /*background-color: aqua;*/
+    width: 90%;
+    margin: 0px auto;
+    border: 0px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.cont1a, .cont2a, .cont3a, .cont4a, .cont5a, .cont6a, .cont7a p{
+    text-align: justify;
+}
+
+.cont1b, .cont2b, .cont3b, .cont4b, .cont5b, .cont6b, .cont7b{
+    /*background-color: burlywood;*/
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    border: 0px;
+    padding: 10px 0px;
+    width: 95%;
+    text-align: justify;
+}
+/* END of the content code */
+
+/* Gallery img div */
+.gallery-images{
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery-imgs{
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    width: 600px;
+    height: max-content;
+}
+.gallery-imgs img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+/* END of gallery img div */
+
+/* This is the start of the code for the marina events images on the home page */
+.home-event{
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.home-event-img{
+    width: 500px;
+    height: 375px;
+    max-height: max-content;
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    text-align: justify;
+}
+.home-event-img p{
+    padding: 0 10px;
+}
+.home-event-img img{
+    width: 100%;
+}
+/* END of the marina events images code */
+
+/* This is the start of the code for the marina events images on the about page */
+.aboutus-event{
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.aboutus-event-img{
+    width: 500px;
+    height: 400px;
+    min-height: max-content;
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    text-align: justify;
+}
+.aboutus-event-img p{
+    padding: 0 10px;
+}
+.aboutus-event-img img{
+    width: 100%;
+}
+/* END of the marina events images code */
+
+/* This is the about us list css where we have the circular images in the about us page */
+.about-us-list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: auto;
+}
+.about-us-list-item{
+    margin: auto;
+}
+.about-us-list-items{/* NOTICE the difference of item and items these two classes are differently named do not confuse them */
+    width: 250px;
+    margin: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+.about-us-list-items img{
+    width: 100%;
+    border-radius: 50%;
+}
+/* END of the about us list css */
+
+/* This code is for the services offered by Yacht and Cruise on the home page */
+.service_list{
+    /*background-color: steelblue;*/
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.service_list_items{
+    /*background-color: tan;*/
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.service_list_cont{
+    padding: 0 5px;
+    margin: auto;
+    text-align: justify;
+}
+
+.service_list_cont h3{
+    text-align: center;
+}
+/* END of the Services offered code */
+
+/* social media on contacts page */
+.social-media-icons-contact{
+    align-items: center;
+    margin: auto;
+}
+
+.social-media-icons-contact ul{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.social-media-icons-contact ul li{
+    padding: 0 auto;
+    list-style: none;
+}
+.social-media-icons-contact ul li a{
+    text-decoration: none;
+    color: #040B17;
+    padding: auto;
+    box-sizing: border-box;
+    margin: 0px 20px;
+    font-size: 25px;
+}
+/* END of social media on contact page */
+
+/* This is the shop and rent page css */
+.shop-rent{
+    width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shop-item{
+    width: 600px;
+    height: 300px;
+    box-sizing: border-box;
+    margin: auto;
+}
+/* Fishing boats start */
+.shop-item .shop-img1:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img1:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img1{
+    background-image: url("../images/shop-img/fishing_dinghy-boat1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img2:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a{
+    display: none;
+    opacity: 0;
+}
+.shop-item .shop-img2:hover .shop-price p,a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img2{
+    background-image: url("../images/shop-img/fishing_game_boat2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img3:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a{
+    display: none;
+    opacity: 0;
+}
+.shop-item .shop-img3:hover .shop-price p,a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img3{
+    background-image: url("../images/shop-img/fishingboat3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img4:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img4:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img4{
+    background-image: url("../images/shop-img/fishingBoat4.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* END Fishing boats */
+/* Sailing boats start here */
+.shop-item .shop-img5:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img5:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img5{
+    background-image: url("../images/shop-img/sailing_boat1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img6:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img6:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img6{
+    background-image: url("../images/shop-img/sailing-boat2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img7:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img7:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img7{
+    background-image: url("../images/shop-img/sailing_yacht2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img8:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img8:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img8{
+    background-image: url("../images/shop-img/sailing-boat4.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* END Sailing Boat */
+/* Luxury boats start here */
+.shop-item .shop-img9:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img9:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img9{
+    background-image: url("../images/shop-img/luxury_classic_yacht1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img10:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img10:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img10{
+    background-image: url("../images/shop-img/luxury_house_boat2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img11:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img11:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img11{
+    background-image: url("../images/shop-img/luxury_megayacht3.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.shop-item .shop-img12:hover .shop-price{
+    background-color: #E8F2FC;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    cursor: pointer;
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    opacity: .9;
+    color: #040B17;
+}
+.shop-price p,a {
+    display: none;
+    opacity: 0;
+}
+.shop-price a{
+    display: hidden;
+}
+.shop-item .shop-img12:hover .shop-price p, a{
+    transition: .5s;
+    animation: ease-in-out;
+    text-align: center;
+    font-size: 20px;
+    opacity: .9;
+    color: #040B17;
+    display: block;
+    margin: 0;
+    padding: 10px;
+}
+.shop-img12{
+    background-image: url("../images/shop-img/luxury-yacht4.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* END luxury boat */
+/* END of shop and page css */
+
+/* This is the code for the ads */
+.ads{
+    box-sizing: border-box;
+    /*background-color: yellow;/* This is to be removed immediately we are done */
+    width: max-content;
+    max-width: 90%;
+    height: 200px;
+    height: max-content;
+    padding: 0px;
+    margin: auto;
+    border: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.ads img{
+    width:100%;
+    border-radius: 20px;
+}
+/* END of the ads code */
+
+/* Embeded map css code */
+iframe{
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    height: 50vh;
+}
+/* END of embeded map css code */
+
+/* Form css code */
+.form-div{
+    box-sizing: border-box;
+    width: 50%;
+    height: min-content;
+    padding: 0;
+    margin: auto;
+    font-size: 17px;
+}
+.form-group label{
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+.form-group .form-inline{
+    width: 70%;
+}
+.form-group select{
+    width: 67%;
+    height: 40px;
+}
+.form-group{
+    width: 70%;
+    padding: 0;
+    display: flex;
+    margin: auto;
+}
+.form-group input{
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+}
+/* EDN of form css code */
+
+/* This is the code for the footer and its contents */
+footer{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    background-color: #040B17;
+    color: #E8F2FC;
+    bottom: 0px;
+    margin: 0px;
+    padding: 1px;
+    box-sizing: border-box;
+    font-family: 'abelregular';
+}
+
+.footer-menu{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.social-media-icons{
+    align-items: center;
+    margin: auto;
+}
+
+.social-media-icons ul{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.social-media-icons ul li{
+    padding: 0 auto;
+    list-style: none;
+}
+.social-media-icons ul li a{
+    text-decoration: none;
+    color: #E8F2FC;
+    padding: auto;
+    box-sizing: border-box;
+    margin: 0px 20px;
+    font-size: 25px;
+}
+
+.facebook a:hover{
+    color: #2F5EEB;
+}
+
+.instagram a:hover{
+    color: #fc4a1a;  /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.twitter a:hover{
+    color: #40A6F7;
+}
+/* END of footer code */

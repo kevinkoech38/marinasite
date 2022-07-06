@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'abelregular';
+    src: url('../webfonts/abel/abel-regular-abel.eot');
+    src: url('../webfonts/abel/abel-regular-abel.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/abel/abel-regular-abel.woff2') format('woff2'),
+         url('../webfonts/abel/abel-regular-abel.woff') format('woff'),
+         url('../webfonts/abel/abel-regular-abel.svg#abelregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
